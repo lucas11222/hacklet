@@ -1,0 +1,21 @@
+<div class="glitch-text">Welcome to Hacklet!</div>
+<style>
+.glitch-text {
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ff00;
+  background: black;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    text-shadow: 2px 2px 0 red, -2px -2px 0 blue;
+    opacity: 1;
+  }
+  50% {
+    text-shadow: 5px 5px 0 red, -5px -5px 0 blue;
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+}
+</style>
