@@ -19,10 +19,26 @@
         <h1>Embark on a journey to bookmark the future.</h1>
         <p>Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about Bookmarklets.</p>
 
+        <h2>Bookmarklet Tester</h2>
+        <form id="bookmarklet-form">
+            <label for="bookmarklet-code">Enter your Bookmarklet JavaScript code:</label>
+            <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
+            <br>
+            <button type="button" onclick="testBookmarklet()">Test Bookmarklet</button>
+        </form>
     </div>
     <script src="script.js"></script>
-	<a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">
-Coded By PianoMan0
+    <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
 
+    <script>
+        function testBookmarklet() {
+            const code = document.getElementById('bookmarklet-code').value;
+            try {
+                eval(code);
+            } catch (error) {
+                alert('Error in bookmarklet code: ' + error.message);
+            }
+        }
+    </script>
 </body>
 </html>
