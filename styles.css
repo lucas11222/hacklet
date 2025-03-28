@@ -179,48 +179,33 @@ body {
     box-shadow: 0 1px 3px rgb(0 0 0 / 50%), 0 6px 13px rgb(0 0 0 / 40%);
 }
 
-body {
-    background: linear-gradient(135deg, #f06, transparent);
-    animation: backgroundAnimation 10s infinite alternate;
+#bookmarklet-form {
+    margin: 20px auto;
+    text-align: center;
 }
 
-@keyframes backgroundAnimation {
-    0% {
-        background: linear-gradient(135deg, #f06, transparent);
-    }
-    50% {
-        background: linear-gradient(135deg, #06f, transparent);
-    }
-    100% {
-        background: linear-gradient(135deg, #0f6, transparent);
-    }
-}
-
-.glitch-text {
-    font-size: 6rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, #f06, #06f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-#joinButton {
-    background-color: #06f;
-    border: 2px solid #f06;
-}
-
-#joinButton:hover {
-    background-color: #f06;
-    color: #06f;
-}
-
-.coded-by-pianoman0 {
-    background: linear-gradient(135deg, #f06, #06f);
+#bookmarklet-code {
+    width: 80%;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 2px solid #fff;
+    background: #000;
     color: #fff;
 }
 
-.coded-by-pianoman0:hover {
-    background: linear-gradient(135deg, #06f, #f06);
+#bookmarklet-form button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#bookmarklet-form button:hover {
+    background-color: #fff;
     color: #000;
 }
