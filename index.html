@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hacklet</title>
@@ -16,22 +14,13 @@
         </a>
     </div>
     <div class="content">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><h1>Embark on a journey to bookmark the future.</h1>
+        <div class="scrollable-section">
+            <br>
+            <br>
+            <br>
+            <h1>Embark on a journey to bookmark the future.</h1>
+        </div>
         <p>Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about Bookmarklets.</p>
-        <br>
-        <br>
-        <h2>What is a bookmarklet?</h2>
-        <p>A bookmarklet is a small JavaScript program stored as a browser bookmark. When clicked, it runs code to modify a webpage, extract data, or perform quick actions.</p>
-        <br>
-        <br>
-        <h2>Here's an example bookmarklet!</h2>
-<pre><code>
-javascript:(function() {
-    var query = window.getSelection().toString();
-    if (!query) query = prompt("Enter search query:");
-    if (query) window.open("https://www.google.com/search?q=" + encodeURIComponent(query));
-})();
-</code></pre>
         <h2>Bookmarklet Tester</h2>
         <form id="bookmarklet-form">
             <label for="bookmarklet-code">Enter your Bookmarklet JavaScript code:</label>
@@ -42,7 +31,6 @@ javascript:(function() {
     </div>
     <script src="script.js"></script>
     <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
-
     <script>
         function testBookmarklet() {
             const code = document.getElementById('bookmarklet-code').value;
@@ -53,5 +41,6 @@ javascript:(function() {
             }
         }
     </script>
-</body>
-</html>
+
+
+</body></html>
