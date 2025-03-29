@@ -24,6 +24,14 @@
         <p>A bookmarklet is a small JavaScript program stored as a browser bookmark. When clicked, it runs code to modify a webpage, extract data, or perform quick actions.</p>
         <br>
         <br>
+        <h2>Here's an example bookmarklet!</h2>
+<pre><code>
+javascript:(function() {
+    var query = window.getSelection().toString();
+    if (!query) query = prompt("Enter search query:");
+    if (query) window.open("https://www.google.com/search?q=" + encodeURIComponent(query));
+})();
+</code></pre>
         <h2>Bookmarklet Tester</h2>
         <form id="bookmarklet-form">
             <label for="bookmarklet-code">Enter your Bookmarklet JavaScript code:</label>
