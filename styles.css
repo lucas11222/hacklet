@@ -209,3 +209,15 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: auto;
+}
+
+code {
+    font-family: Consolas, "Courier New", monospace;
+    color: #333;
+}
