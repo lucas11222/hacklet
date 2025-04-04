@@ -13,7 +13,7 @@ body {
 
 .glitch-container {
     position: absolute;
-    top: 20%;
+    top: 30%;
     text-align: center;
 }
 
@@ -52,6 +52,7 @@ body {
 .content {
     text-align: center;
     z-index: 1;
+    margin-top: 50px;
 }
 
 #joinButton {
