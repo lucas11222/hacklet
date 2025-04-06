@@ -5,15 +5,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="script.js"></script>
+
+    <div class="github-mark">
+        <a href="https://github.com/PianoMan0/hacklet" target="_blank">
+            <img src="/github-mark.svg" alt="GitHub Mark">
+        </a>
+    </div>
+ 
+    <div class="content">
     <div class="glitch-container">
         <div class="glitch-text" data-text="Hacklet">Hacklet</div>
     </div>
-    <div class="github-mark">
-        <a href="https://github.com/PianoMan0/hacklet" target="_blank">
-            <img src="images/github-mark.svg" alt="GitHub Mark">
-        </a>
-    </div>
-    <div class="content">
+ 
         <div class="scrollable-section">
             <br>
             <br>
@@ -26,6 +30,7 @@
         <h2>What is a bookmarklet?</h2>
         <p>A bookmarklet is a small JavaScript program stored as a browser bookmark. When clicked, it runs code to modify a webpage, extract data, or perform quick actions.</p>
         <br>
+
         <br>
         <h2>Here's an example bookmarklet!</h2>
 <pre><code>
@@ -43,10 +48,11 @@ javascript:(function() {
             <br>
             <button type="button" onclick="testBookmarklet()">Test Bookmarklet</button>
         </form>
-    </div>
-    <script src="script.js"></script>
+ 
+
     <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
-    <script>
+</div>
+   <script>
         function testBookmarklet() {
             const code = document.getElementById('bookmarklet-code').value;
             try {

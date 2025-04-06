@@ -4,17 +4,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
     background: #000;
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .glitch-container {
-    position: absolute;
-    top: 30%;
     text-align: center;
+    margin-top: 20vh;
 }
 
 .glitch-text {
@@ -52,7 +51,6 @@ body {
 .content {
     text-align: center;
     z-index: 1;
-    margin-top: 50px;
 }
 
 #joinButton {
@@ -160,9 +158,6 @@ body {
 
 .coded-by-pianoman0 {
     font-family: "IBM Plex Mono", monospace;
-    position: fixed;
-    bottom: 20px;
-    left: 45%;
     display: inline-flex;
     padding: 8px 12px;
     align-items: center;
