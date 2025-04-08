@@ -11,6 +11,11 @@ body {
     overflow: scroll;
 }
 
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
 .glitch-container {
     text-align: center;
     margin-top: 20vh;
