@@ -218,6 +218,12 @@ pre {
     overflow: auto;
 }
 
+#bookmarklet-tutorial {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+
 code {
     font-family: Consolas, "Courier New", monospace;
     color: #333;
