@@ -30,6 +30,38 @@
         <h2>What is a bookmarklet?</h2>
         <p>A bookmarklet is a small JavaScript program stored as a browser bookmark. When clicked, it runs code to modify a webpage, extract data, or perform quick actions.</p>
         <br>
+<section id="bookmarklet-tutorial" style="margin: 20px; padding: 20px; border: 1px solid #ccc;">
+            <h2>How to make a Bookmarklet</h2>
+            <ol>
+                <li>
+                    Write a JavaScript function to perform the desired task. For example:
+                    <pre>
+                        <code>
+javascript:(function() {
+    alert('Hello, this is a bookmarklet!');
+})();
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    Copy the code and prepend it with the `javascript:` prefix. Remove any newlines or unnecessary spaces.
+                </li>
+                <li>
+                    Create a new bookmark in your browser and paste the code as the URL.
+                </li>
+            </ol>
+            <h3>Example Bookmarklet</h3>
+            <p>
+                Drag the following link to your bookmarks bar to try an example bookmarklet:
+                <a href="javascript:(function(){alert('Hello, this is a bookmarklet!');})();">Click Me!</a>
+            </p>
+            <h3>How to Use Bookmarklets</h3>
+            <p>
+                Simply click the bookmarklet from your bookmarks bar while on any webpage to execute the JavaScript code.
+            </p>
+        </section>
+    
+    
 
         <br>
         <h2>Here's an example bookmarklet!</h2>
@@ -67,35 +99,4 @@ javascript:(function() {
 
 </body>
 </html>
-        <section id="bookmarklet-tutorial" >
-            <h2>How to make a Bookmarklet</h2>
-            <ol>
-                <li>
-                    Write a JavaScript function to perform the desired task. For example:
-                    <pre>
-                        <code>
-javascript:(function() {
-    alert('Hello, this is a bookmarklet!');
-})();
-                        </code>
-                    </pre>
-                </li>
-                <li>
-                    Copy the code and prepend it with the `javascript:` prefix. Remove any newlines or unnecessary spaces.
-                </li>
-                <li>
-                    Create a new bookmark in your browser and paste the code as the URL.
-                </li>
-            </ol>
-            <h3>Example Bookmarklet</h3>
-            <p>
-                Drag the following link to your bookmarks bar to try an example bookmarklet:
-                <a href="javascript:(function(){alert('Hello, this is a bookmarklet!');})();">Click Me!</a>
-            </p>
-            <h3>How to Use Bookmarklets</h3>
-            <p>
-                Simply click the bookmarklet from your bookmarks bar while on any webpage to execute the JavaScript code.
-            </p>
-        </section>
-    </div>
-    
+        
