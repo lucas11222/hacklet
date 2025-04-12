@@ -8,7 +8,7 @@
     <script src="script.js"></script>
 
     <div class="github-mark">
-        <a href="https://github.com/PianoMan0/hacklet">
+        <a href="https://github.com/PianoMan0/hacklet" target="_blank">
             <img src="/github-mark.svg" alt="GitHub Mark">
         </a>
     </div>
@@ -18,19 +18,55 @@
         <div class="glitch-text" data-text="Hacklet">Hacklet</div>
     </div>
  
-<div class="scrollable-section">
+        <div class="scrollable-section">
             <br>
             <br>
             <br>
             <h1>Embark on a journey to bookmark the future.</h1>
         </div>
         <p>Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about Bookmarklets.</p>
-        <p>Make a bookmarklet, get a domain.</p>
         <br>
         <br>
         <h2>What is a bookmarklet?</h2>
         <p>A bookmarklet is a small JavaScript program stored as a browser bookmark. When clicked, it runs code to modify a webpage, extract data, or perform quick actions.</p>
         <br>
+
+        <br>
+        <h2>Here's an example bookmarklet!</h2>
+<pre><code>
+javascript:(function() {
+    var query = window.getSelection().toString();
+    if (!query) query = prompt("Enter search query:");
+    if (query) window.open("https://www.google.com/search?q=" + encodeURIComponent(query));
+})();
+</code></pre>
+        <br>
+        <h2>Bookmarklet Tester</h2>
+        <form id="bookmarklet-form">
+            <label for="bookmarklet-code">Enter your Bookmarklet JavaScript code:</label>
+            <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
+            <br>
+            <button type="button" onclick="testBookmarklet()">Test Bookmarklet</button>
+        </form>
+ 
+
+    <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
+    <p>With amazing bug fixing by Charmunk!</p>
+</div>
+   <script>
+        function testBookmarklet() {
+            const code = document.getElementById('bookmarklet-code').value;
+            try {
+                eval(code);
+            } catch (error) {
+                alert('Error in bookmarklet code: ' + error.message);
+            }
+        }
+    </script>
+
+
+</body>
+</html>
         <section id="bookmarklet-tutorial" style="margin: 20px; padding: 20px; border: 1px solid #ccc;">
             <h2>How to make a Bookmarklet</h2>
             <ol>
@@ -62,35 +98,4 @@ javascript:(function() {
             </p>
         </section>
     </div>
-    <br>
-        <h2>Here's an example bookmarklet!</h2>
-        <pre><code>
-javascript:(function() {
-    var query = window.getSelection().toString();
-    if (!query) query = prompt("Enter search query:");
-    if (query) window.open("https://www.google.com/search?q=" + encodeURIComponent(query));
-})();
-        </code></pre>
-        <br>
-        <h2>Bookmarklet Tester</h2>
-        <form id="bookmarklet-form">
-            <label for="bookmarklet-code">Enter your Bookmarklet JavaScript code:</label>
-            <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
-            <br>
-            <button type="button" onclick="testBookmarklet()">Test Bookmarklet</button>
-        </form>
-        <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
-        <p>With amazing bug fixing by Charmunk!</p>
-   <script>
-        function testBookmarklet() {
-            const code = document.getElementById('bookmarklet-code').value;
-            try {
-                eval(code);
-            } catch (error) {
-                alert('Error in bookmarklet code: ' + error.message);
-            }
-        }
-    </script>
-
-
-</body></html>
+    
