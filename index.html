@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
     	<meta charset="UTF-8">
@@ -15,12 +16,11 @@
         </a>
     </div>
    <div class="glitch-container"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
-   <h1><u>Hacklet</u></h1>
+   <h1>Hacklet</h1>
    <h1>Embark on a journey to bookmark the future.</h1>
-   <h3>Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about Bookmarklets.</h4>
-   <h3>Build a bookmarklet, get a domain.</h4>
-   <a href="rules.html"><h3>The Rules</h3></a>
-   <h3>You have to read the rules to submit your project!</h3>
+   <h3>Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about Bookmarklets.</h3>
+   <h3>Build a bookmarklet, get a domain.</h3>
+   <a href="rules.html"><h3>The Rules</a> <-- click here!</h3>
    <br>
    <br> 
    <h2>What is a bookmarklet?</h2>
@@ -59,14 +59,6 @@ javascript:(function() {
     
 
         <br>
-        <h2>Here's an example bookmarklet by Rrr!</h2>
-<pre><code>
-javascript:(function() {
-    var query = window.getSelection().toString();
-    if (!query) query = prompt("Enter search query:");
-    if (query) window.open("https://www.google.com/search?q=" + encodeURIComponent(query));
-})();
-</code></pre>
         <br>
         <h2>Bookmarklet Tester</h2>
         <form id="bookmarklet-form">
@@ -74,7 +66,7 @@ javascript:(function() {
             <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
             <br>
             <button type="button" onclick="testBookmarklet()">Test Bookmarklet</button>
-        </form>
+        </form><br>
     <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
     <p>With amazing bug fixing by Charmunk!</p>
 </div>
@@ -82,7 +74,12 @@ javascript:(function() {
         function testBookmarklet() {
             const code = document.getElementById('bookmarklet-code').value;
             try {
-                eval(code);
+                if (code.trim().startsWith('javascript:')) {
+                    const cleanCode = code.replace('javascript:', '');
+                    (new Function(cleanCode))();
+                } else {
+                    throw new Error('Bookmarklet must start with "javascript:"');
+                }
             } catch (error) {
                 alert('Error in bookmarklet code: ' + error.message);
             }
