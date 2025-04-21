@@ -190,9 +190,6 @@ a {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     margin-bottom: 10px;
-    border: 2px solid #fff;
-    background: #000;
-    color: #fff;
 }
 
 #bookmarklet-form button {
@@ -211,10 +208,7 @@ a {
 }
 
 pre {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
     padding: 10px;
-    overflow: auto;
 }
 
 #bookmarklet-tutorial {
@@ -222,9 +216,4 @@ pre {
     clear: both;
     width: 95%;
     margin-left: 1%;
-}
-
-code {
-    font-family: Consolas, "Courier New", monospace;
-    color: #333;
 }
