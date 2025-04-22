@@ -85,7 +85,7 @@ javascript:(function() {
                 <br>
                 <button type="button" onclick="testBookmarklet()">Test Bookmarklet</button>
                 <button type="button"
-                    onclick="document.getElementById('bookmarklet-code').value = minifyJS(document.getElementById('bookmarklet-code').value.startsWith('javascript:') ? document.getElementById('bookmarklet-code').value.slice('javascript:'.length) : document.getElementById('bookmarklet-code').value)">Minify</button>
+                    onclick="document.getElementById('bookmarklet-code').value = minifyJS(document.getElementById('bookmarklet-code').value)">Minify</button>
 
             </form><br>
             <a href="https://github.com/pianoman0" target="_blank" class="coded-by-pianoman0">Coded By PianoMan0</a>
@@ -94,7 +94,13 @@ javascript:(function() {
     </div>
     <script>
         function minifyJS(code) {
-            return Terser.minify_sync(code).code;
+            try {
+                const minified = Terser.minify_sync(code).code;
+                return minified ? 'javascript:' + minified : code;
+            } catch (error) {
+                alert('Error while minifying code: ' + error.message);
+                return code;
+            }
         }
         function testBookmarklet() {
             const code = document.getElementById('bookmarklet-code').value;
