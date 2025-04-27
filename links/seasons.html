@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hacklet</title>
-		<link rel="icon" href="Untitled_Artwork 26.png" type="image/png" />
-		<link rel="apple-touch-icon" href="Untitled_Artwork 26.png" />
-		<link rel="stylesheet" href="styles.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
-		/>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/terser@5.39.0/dist/bundle.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacklet</title>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/terser@5.39.0/dist/bundle.min.js"></script>
 
-		<!-- and it's easy to individually load additional languages -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 
-		<script>
-			hljs.highlightAll();
-		</script>
-	</head>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
 
-	<body>
-  <h1>Lucas-11-Multi-Bookmarklet</h1>
-  <p>This is a multi-tool that adds this features:
-
-1: CalcString. An sum of phases (with easter eggs)
-
-2: JTBC. An compiler for Bookmarklets in a Bookmarklet (yea xd).
-
-3: Mini-JTBC. Just runs Javascript.
-
-4: An Mysterious option (is a rick roll).</p>
-<pre>
+  <body>
+    <h1>Lucas-11-Multi-Bookmarklet</h1>
+    <p>
+      This is a multi-tool that adds this features: 1: CalcString. An sum of
+      phases (with easter eggs) 2: JTBC. An compiler for Bookmarklets in a
+      Bookmarklet (yea xd). 3: Mini-JTBC. Just runs Javascript. 4: An Mysterious
+      option (is a rick roll).
+    </p>
+    <pre>
                         <code class="language-js">
 javascript:(function () {
   function showMenu() {
@@ -161,37 +158,36 @@ javascript:(function () {
 })();                        </code>
                     </pre>
 
+    <br />
+    <br />
+    <center><h2>Bookmarklet Tester</h2></center>
+    <form id="bookmarklet-form">
+      <label for="bookmarklet-code"
+        >Enter your Bookmarklet JavaScript code:</label
+      >
+      <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
+      <br />
+      <button type="button" onclick="testBookmarklet()">
+        Test Bookmarklet
+      </button>
+    </form>
+    <br />
 
-<br />
-			<br />
-			<center><h2>Bookmarklet Tester</h2></center>
-			<form id="bookmarklet-form">
-				<label for="bookmarklet-code"
-					>Enter your Bookmarklet JavaScript code:</label
-				>
-				<textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
-				<br />
-				<button type="button" onclick="testBookmarklet()">
-					Test Bookmarklet
-				</button>
-			</form>
-			<br />
-	
-      <script>
-   function testBookmarklet() {
-				const code = document.getElementById('bookmarklet-code').value;
-				try {
-					if (code.trim().startsWith('javascript:')) {
-						const cleanCode = code.replace('javascript:', '');
-						console.log(cleanCode, minifyJS(cleanCode));
-						new Function(cleanCode)();
-					} else {
-						throw new Error(
-							'Bookmarklet must start with "javascript:"',
-						);
-					}
-				} catch (error) {
-					alert('Error in bookmarklet code: ' + error.message);
-				}
-			}
-		</script>
+    <script>
+      function testBookmarklet() {
+        const code = document.getElementById("bookmarklet-code").value;
+        try {
+          if (code.trim().startsWith("javascript:")) {
+            const cleanCode = code.replace("javascript:", "");
+            console.log(cleanCode, minifyJS(cleanCode));
+            new Function(cleanCode)();
+          } else {
+            throw new Error('Bookmarklet must start with "javascript:"');
+          }
+        } catch (error) {
+          alert("Error in bookmarklet code: " + error.message);
+        }
+      }
+    </script>
+  </body>
+</html>
