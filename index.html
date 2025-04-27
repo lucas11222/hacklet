@@ -1,153 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Hacklet</title>
-		<link rel="icon" href="Untitled_Artwork 26.png" type="image/png" />
-		<link rel="apple-touch-icon" href="Untitled_Artwork 26.png" />
-		<link rel="stylesheet" href="styles.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
-		/>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/terser@5.39.0/dist/bundle.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacklet</title>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/terser@5.39.0/dist/bundle.min.js"></script>
 
-		<!-- and it's easy to individually load additional languages -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 
-		<script>
-			hljs.highlightAll();
-		</script>
-	</head>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </head>
 
-	<body>
-		<div class="github-mark">
-			<a href="https://github.com/PianoMan0/hacklet" target="_blank">
-				<img src="github-mark.svg" alt="GitHub Mark" />
-			</a>
-		</div>
-		<div class="glitch-container">
-			<h1>Hacklet</h1>
-			<h1>Embark on a journey to bookmark the future.</h1>
-			<h3>
-				Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about
-				Bookmarklets.
-			</h3>
-			<h3>Build a bookmarklet, get a domain.</h3>
-			<a href="rules.html" style="display: inline-flex; align-items: center; gap: 5px;">
-   				<h3 style="margin: 0;">The Rules</h3>
-			</a>
-    			<span style="font-size: 0.9em; color: gray; display: inline-flex; align-items: center; gap: 5px;"> <- click here!</span>
-			
-			<br />
-			<br />
-			<h2>What is a bookmarklet?</h2>
-			<p>
-				A bookmarklet is a small JavaScript program stored as a browser
-				bookmark. When clicked, it runs code to modify a webpage,
-				extract data, or perform quick actions.
-			</p>
-			<br />
-			<section
-				id="bookmarklet-tutorial"
-				style="padding: 20px; border: 1px solid #ccc"
-			>
-				<h2>How to make a Bookmarklet</h2>
-				<ol>
-					<li>
-						Write a JavaScript function to perform the desired task.
-						For example:
-						<pre>
+  <body>
+    <div class="github-mark">
+      <a href="https://github.com/PianoMan0/hacklet" target="_blank">
+        <img src="github-mark.svg" alt="GitHub Mark" />
+      </a>
+    </div>
+    <div class="glitch-container">
+      <h1>Hacklet</h1>
+      <h1>Embark on a journey to bookmark the future.</h1>
+      <h3>
+        Hacklet is a <a href="https://ysws.hackclub.com">YSWS</a> about
+        Bookmarklets.
+      </h3>
+      <h3>Build a bookmarklet, get a domain.</h3>
+      <a
+        href="rules.html"
+        style="display: inline-flex; align-items: center; gap: 5px"
+      >
+        <h3 style="margin: 0">The Rules</h3>
+      </a>
+      <span
+        style="
+          font-size: 0.9em;
+          color: gray;
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+        "
+      >
+        <- click here!</span
+      >
+
+      <br />
+      <br />
+      <h2>What is a bookmarklet?</h2>
+      <p>
+        A bookmarklet is a small JavaScript program stored as a browser
+        bookmark. When clicked, it runs code to modify a webpage, extract data,
+        or perform quick actions.
+      </p>
+      <br />
+      <section
+        id="bookmarklet-tutorial"
+        style="padding: 20px; border: 1px solid #ccc"
+      >
+        <h2>How to make a Bookmarklet</h2>
+        <ol>
+          <li>
+            Write a JavaScript function to perform the desired task. For
+            example:
+            <pre>
                         <code class="language-js">
 javascript:(function() {
     alert('Hello, this is a bookmarklet!');
 })();
                         </code>
                     </pre>
-					</li>
-					<li>
-						Copy the code and prepend it with the `javascript:`
-						prefix. Remove any newlines or unnecessary spaces.
-					</li>
-					<li>
-						Create a new bookmark in your browser and paste the code
-						as the URL.
-					</li>
-				</ol>
-				<h3>Example Bookmarklet</h3>
-				<p>
-					Drag the following link to your bookmarks bar to try an
-					example bookmarklet:
-					<a
-						href="javascript:(function(){alert('Hello, this is a bookmarklet!');})();"
-						>Click Me!</a
-					>
-				</p>
-				<h3>How to Use Bookmarklets</h3>
-				<p>
-					Simply click the bookmarklet from your bookmarks bar while
-					on any webpage to execute the JavaScript code.
-				</p>
-				<img
-					src="search_wikipedia_screenshot.png"
-					alt="Example Image"
-				/>
-			</section>
+          </li>
+          <li>
+            Copy the code and prepend it with the `javascript:` prefix. Remove
+            any newlines or unnecessary spaces.
+          </li>
+          <li>
+            Create a new bookmark in your browser and paste the code as the URL.
+          </li>
+        </ol>
+        <h3>Example Bookmarklet</h3>
+        <p>
+          Drag the following link to your bookmarks bar to try an example
+          bookmarklet:
+          <a
+            href="javascript:(function(){alert('Hello, this is a bookmarklet!');})();"
+            >Click Me!</a
+          >
+        </p>
+        <h3>How to Use Bookmarklets</h3>
+        <p>
+          Simply click the bookmarklet from your bookmarks bar while on any
+          webpage to execute the JavaScript code.
+        </p>
+        <img src="ss.png" alt="Example Image" />
+      </section>
 
-			<br />
-			<br />
-			<h2>Bookmarklet Tester</h2>
-			<form id="bookmarklet-form">
-				<label for="bookmarklet-code"
-					>Enter your Bookmarklet JavaScript code:</label
-				>
-				<textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
-				<br />
-				<button type="button" onclick="testBookmarklet()">
-					Test Bookmarklet
-				</button>
-			</form>
-			<br />
-			<a
-				href="https://github.com/pianoman0"
-				target="_blank"
-				class="coded-by-pianoman0"
-				>Coded By PianoMan0</a
-			>
-			<p>
-				With amazing bug fixing by
-				<a href="https://github.com/isaacfonner">Charmunk</a>,
-				<a href="https://saahild.com">Neon</a>!
-			</p>
-		</div>
-		<script>
-			function minifyJS(code) {
-				try {
-					const minified = Terser.minify_sync(code).code;
-					return minified ? 'javascript:' + minified : code;
-				} catch (error) {
-					alert('Error while minifying code: ' + error.message);
-					return code;
-				}
-			}
-			function testBookmarklet() {
-				const code = document.getElementById('bookmarklet-code').value;
-				try {
-					if (code.trim().startsWith('javascript:')) {
-						const cleanCode = code.replace('javascript:', '');
-						console.log(cleanCode, minifyJS(cleanCode));
-						new Function(cleanCode)();
-					} else {
-						throw new Error(
-							'Bookmarklet must start with "javascript:"',
-						);
-					}
-				} catch (error) {
-					alert('Error in bookmarklet code: ' + error.message);
-				}
-			}
-		</script>
-	</body>
+      <br />
+      <br />
+      <h2>Bookmarklet Tester</h2>
+      <form id="bookmarklet-form">
+        <label for="bookmarklet-code"
+          >Enter your Bookmarklet JavaScript code:</label
+        >
+        <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
+        <br />
+        <button type="button" onclick="testBookmarklet()">
+          Test Bookmarklet
+        </button>
+      </form>
+      <br />
+      <a
+        href="https://github.com/pianoman0"
+        target="_blank"
+        class="coded-by-pianoman0"
+        >Coded By PianoMan0</a
+      >
+      <p>
+        With amazing bug fixing by
+        <a href="https://github.com/isaacfonner">Charmunk</a>,
+        <a href="https://saahild.com">Neon</a>!
+      </p>
+    </div>
+    <script>
+      function minifyJS(code) {
+        try {
+          const minified = Terser.minify_sync(code).code;
+          return minified ? "javascript:" + minified : code;
+        } catch (error) {
+          alert("Error while minifying code: " + error.message);
+          return code;
+        }
+      }
+      function testBookmarklet() {
+        const code = document.getElementById("bookmarklet-code").value;
+        try {
+          if (code.trim().startsWith("javascript:")) {
+            const cleanCode = code.replace("javascript:", "");
+            console.log(cleanCode, minifyJS(cleanCode));
+            new Function(cleanCode)();
+          } else {
+            throw new Error('Bookmarklet must start with "javascript:"');
+          }
+        } catch (error) {
+          alert("Error in bookmarklet code: " + error.message);
+        }
+      }
+    </script>
+  </body>
 </html>
