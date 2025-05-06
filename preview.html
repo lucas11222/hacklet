@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <p id="record-id"></p>
+    <p id="record-name"></p>
+    <script>
+      const id = new URLSearchParams(window.location.search).get('id')
+      document.getElementById('record-id').innerText = id
+
+      const url = 'https://api2.hackclub.com/v0.1/Hacklet/Hacklet%20Project%20Submission' 
+      const record = fetch(url).then(r => r.json()).then(d => {
+        const record = d.find(d => d.id == id)
+        console.log({record})
+        document.getElementById('record-name').innerText = record.fields["Project Name"]
+      })
+    </script>
+  </body>
+</html>
