@@ -21,7 +21,18 @@
       hljs.highlightAll();
     </script>
   </head>
-
+    <center><h2>Bookmarklet Tester</h2></center>
+    <form id="bookmarklet-form">
+      <label for="bookmarklet-code"
+        >Enter your Bookmarklet JavaScript code:</label
+      >
+      <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
+      <br />
+      <button type="button" onclick="testBookmarklet()">
+        <a href="#">Test Bookmarklet</a>
+      </button>
+    </form>
+    <br />
   <body>
     <h1>Lucas-11-Multi-Bookmarklet</h1>
     <p>
@@ -158,20 +169,7 @@ javascript:(function () {
 })();                        </code>
                     </pre>
 
-    <br />
-    <br />
-    <center><h2>Bookmarklet Tester</h2></center>
-    <form id="bookmarklet-form">
-      <label for="bookmarklet-code"
-        >Enter your Bookmarklet JavaScript code:</label
-      >
-      <textarea id="bookmarklet-code" rows="4" cols="50"></textarea>
-      <br />
-      <button type="button" onclick="testBookmarklet()">
-        Test Bookmarklet
-      </button>
-    </form>
-    <br />
+   
 
     <script>
       function testBookmarklet() {
