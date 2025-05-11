@@ -98,15 +98,6 @@
         document.getElementById('test-bookmarklet').href = record.fields["Bookmarklet Code"]
       })
 
-      function minifyJS(code) {
-        try {
-          const minified = Terser.minify_sync(code).code;
-          return minified ? "javascript:" + minified : code;
-        } catch (error) {
-          alert("Error while minifying code: " + error.message);
-          return code;
-        }
-      }
       function testBookmarklet() {
         const code = document.getElementById("record-code").innerText;
         try {
