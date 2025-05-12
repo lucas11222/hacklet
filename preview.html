@@ -106,19 +106,20 @@ Loading...</pre>
         document.getElementById('record-name').innerText = 'No ID provided in URL';
       }
 
-      function testBookmarklet() {
-        const code = document.getElementById('record-code').innerText;
-        try {
-          if (code.trim().startsWith('javascript:')) {
-            const cleanCode = code.replace('javascript:', '');
-            new Function(cleanCode)();
-          } else {
-            throw new Error('Bookmarklet must start with "javascript:"');
-          }
-        } catch (error) {
-          alert('Error in bookmarklet code: ' + error.message);
-        }
-      }
+     function testBookmarklet() {
+      const code = document.getElementById('record-code').innerText;
+      try {
+        if (code.trim().startsWith('javascript:')) {
+          const cleanCode = code.replace('javascript:', '');
+          new Function(cleanCode)();
+        } else {
+          throw new Error('Bookmarklet must start with "javascript:"');
+    }
+  } catch (error) {
+    console.error('Error executing bookmarklet:', error);
+    alert('Error in bookmarklet code: ' + error.message);
+  }
+}
     </script>
   </body>
 </html>
